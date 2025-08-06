@@ -28,7 +28,7 @@ const Home = () => {
           <div className="home-photo-container">
             {/* Replace the src with your actual photo path */}
             <img 
-              src="/src/assets/images/visakh.png" 
+              src="/visakh.png" 
               alt="Visakh Vijayakumar"
               className="home-photo"
             />
