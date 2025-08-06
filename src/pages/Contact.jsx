@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, MapPin, Phone } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,13 +18,46 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with a form handling service like FormSpree, Netlify Forms, etc.
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    
+    // Your FormSpree form ID
+    const FORM_ID = 'xrblyvda';
+    
+    if (FORM_ID === 'YOUR_FORM_ID') {
+      alert('⚠️ Form not configured yet! Please set up FormSpree first.\n\n1. Go to formspree.io\n2. Create a form\n3. Replace YOUR_FORM_ID in the code');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        alert('✅ Thank you for your message! I\'ll get back to you soon.');
+        // Clear the form
+        setFormData({ 
+          name: '', 
+          email: '', 
+          subject: '', 
+          message: '' 
+        });
+      } else {
+        alert('❌ There was an issue sending your message. Please try again or contact me directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('❌ Network error. Please check your connection and try again, or contact me directly via email.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -148,8 +183,8 @@ const Contact = () => {
               />
             </div>
 
-            <button type="submit" className="form-button">
-              Send Message
+            <button type="submit" className="form-button" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
 
