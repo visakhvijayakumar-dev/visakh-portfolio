@@ -169,20 +169,6 @@ const Contact = () => {
         <p style={{ color: '#525252', marginBottom: '1rem' }}>
           Based in Kerala, India • Available for remote work worldwide
         </p>
-        <div className="stats-grid" style={{ maxWidth: '500px', margin: '0 auto' }}>
-          <div>
-            <div className="stat-number">7+</div>
-            <div className="stat-label">Years Experience</div>
-          </div>
-          <div>
-            <div className="stat-number">87.7%</div>
-            <div className="stat-label">AWS Cert Score</div>
-          </div>
-          <div>
-            <div className="stat-number">24h</div>
-            <div className="stat-label">Response Time</div>
-          </div>
-        </div>
       </div>
     </div>
   );
