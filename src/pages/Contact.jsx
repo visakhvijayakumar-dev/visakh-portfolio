@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Linkedin, MapPin, Phone } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,12 +26,6 @@ const Contact = () => {
     // Your FormSpree form ID
     const FORM_ID = 'xrblyvda';
     
-    if (FORM_ID === 'YOUR_FORM_ID') {
-      alert('⚠️ Form not configured yet! Please set up FormSpree first.\n\n1. Go to formspree.io\n2. Create a form\n3. Replace YOUR_FORM_ID in the code');
-      setIsSubmitting(false);
-      return;
-    }
-    
     try {
       const response = await fetch(`https://formspree.io/f/${FORM_ID}`, {
         method: 'POST',
@@ -41,7 +36,7 @@ const Contact = () => {
       });
       
       if (response.ok) {
-        alert('✅ Thank you for your message! I\'ll get back to you soon.');
+        toast.success('Thank you for your message! I\'ll get back to you soon.');
         // Clear the form
         setFormData({ 
           name: '', 
@@ -50,11 +45,11 @@ const Contact = () => {
           message: '' 
         });
       } else {
-        alert('❌ There was an issue sending your message. Please try again or contact me directly.');
+        toast.error('There was an issue sending your message. Please try again or contact me directly.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('❌ Network error. Please check your connection and try again, or contact me directly via email.');
+      toast.error('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
