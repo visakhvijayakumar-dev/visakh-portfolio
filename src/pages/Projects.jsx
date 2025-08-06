@@ -1,48 +1,26 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
-const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, featured = false }) => (
-  <div className={`group ${featured ? 'md:col-span-2' : ''}`}>
-    <div className="border border-gray-200 hover:border-gray-300 transition-colors duration-300 bg-white">
-      <div className="p-8 space-y-6">
-        <div className="flex justify-between items-start">
-          <h3 className="text-2xl font-serif text-gray-900">{title}</h3>
-          <div className="flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
-            {githubUrl && (
-              <a 
-                href={githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900 transition-colors"
-              >
-                <Github size={20} />
-              </a>
-            )}
-            {liveUrl && (
-              <a 
-                href={liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-900 transition-colors"
-              >
-                <ExternalLink size={20} />
-              </a>
-            )}
-          </div>
+const ProjectCard = ({ title, description, technologies, featured = false }) => (
+  <div className={`project-card ${featured ? 'projects-grid' : ''}`} style={featured ? { gridColumn: '1 / -1' } : {}}>
+    <div className="project-card-content">
+      <div className="project-card-header">
+        <h3 className="project-title">{title}</h3>
+        <div className="project-links">
+          <span className="project-link">
+            <ExternalLink size={20} />
+          </span>
         </div>
-        
-        <p className="text-gray-700 leading-relaxed">{description}</p>
-        
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
-            <span 
-              key={tech}
-              className="px-3 py-1 bg-gray-100 text-gray-600 text-sm"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+      </div>
+      
+      <p className="project-description">{description}</p>
+      
+      <div className="skills-grid">
+        {technologies.map((tech) => (
+          <span key={tech} className="skill-tag">
+            {tech}
+          </span>
+        ))}
       </div>
     </div>
   </div>
@@ -51,58 +29,79 @@ const ProjectCard = ({ title, description, technologies, liveUrl, githubUrl, fea
 const Projects = () => {
   const projects = [
     {
-      title: "Enterprise Analytics Platform",
-      description: "A comprehensive analytics platform built for IBM Labs, processing millions of data points daily. Features real-time dashboards, advanced reporting capabilities, and machine learning-powered insights that help enterprise clients make data-driven decisions.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Redis", "D3.js", "AWS"],
+      title: "Business Intelligence Platform",
+      description: "Comprehensive AI-powered platform featuring automated presentation generation service, email alert systems, and advanced reporting capabilities. Built backend services that integrate with Looker to provide real-time business insights and performance tracking for enterprise clients.",
+      technologies: ["Node.js", "TypeScript", "Google Cloud Platform", "Cloud SQL", "Looker", "Cloud Functions"],
       featured: true
     },
     {
-      title: "Microservices Architecture",
-      description: "Designed and implemented a scalable microservices architecture for a financial services client, reducing system response times by 60% and improving overall reliability.",
-      technologies: ["Node.js", "Docker", "Kubernetes", "MongoDB", "GraphQL"]
+      title: "Renewable Energy Platform",
+      description: "Enterprise-scale platform with core backend functionalities including Role-Based Access Management (RBAM), API Manager, Logging Microservice, User Management, and comprehensive analytics. Collaborated with Google architects on platform architecture.",
+      technologies: ["Node.js", "Google Cloud Platform", "Microservices", "RBAM", "Analytics"]
     },
     {
-      title: "Real-time Collaboration Tool",
-      description: "Built a collaborative workspace application with real-time editing, video conferencing integration, and advanced permission management for distributed teams.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL", "WebRTC"]
+      title: "Healthcare Web Application",
+      description: "Advanced web application for displaying patient health conditions and symptoms, designed for doctors and researchers to identify, treat conditions, and conduct genetic disease research.",
+      technologies: ["React.js", "Node.js", "Healthcare Systems", "Database Design", "Medical Research"]
     },
     {
-      title: "Cloud Migration Platform",
-      description: "Developed tooling to automate cloud migration processes for legacy enterprise applications, reducing migration time from months to weeks.",
-      technologies: ["Python", "AWS", "Terraform", "Docker", "Jenkins"]
+      title: "IoT Network Device Monitoring",
+      description: "AWS Cloud infrastructure for IoT device registration, control, and monitoring. Created SNMP Agent using Python to retrieve data from DynamoDB and implemented secure communication protocols. Received significant client appreciation.",
+      technologies: ["AWS IoT", "Python", "AWS Lambda", "DynamoDB", "SNMP", "Security"]
     },
     {
-      title: "API Management System",
-      description: "Created a comprehensive API management platform with authentication, rate limiting, analytics, and developer portal functionality.",
-      technologies: ["Node.js", "Redis", "MongoDB", "React", "OpenAPI"]
+      title: "Smart Fragrance Control System",
+      description: "Converted traditional fragrance generators to IoT devices using AWS Cloud platform. Implemented TOTP security mechanisms, REST APIs for mobile/web apps, and comprehensive device management systems.",
+      technologies: ["AWS IoT", "AWS Lambda", "TOTP", "REST APIs", "React.js", "Mobile Integration"]
+    },
+    {
+      title: "Security Testing & Penetration",
+      description: "Conducted comprehensive penetration testing for client web applications using OWASP ZAP Proxy tool. Identified and remediated SQL injection vulnerabilities, implemented clickjacking protection, and secured session management.",
+      technologies: ["OWASP ZAP", "SQLMap", "Security Testing", "Vulnerability Assessment", "Kali Linux"]
     }
   ];
 
   return (
-    <div className="min-h-screen py-20 px-6 max-w-6xl mx-auto">
-      <div className="space-y-16">
-        <div>
-          <h1 className="text-4xl md:text-6xl font-serif text-gray-900 mb-8">
-            Selected Projects
-          </h1>
-          <div className="w-24 h-0.5 bg-gray-300"></div>
-          <p className="text-xl text-gray-600 mt-8 max-w-2xl">
-            A collection of enterprise-level applications and systems I've built 
-            throughout my career, focusing on scalability, performance, and user experience.
-          </p>
-        </div>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">Selected Projects</h1>
+        <hr className="page-divider" />
+        <p className="page-description">
+          A showcase of enterprise-level applications, IoT systems, and security solutions 
+          I've built throughout my career, emphasizing scalability, security, and innovation.
+        </p>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </div>
 
-        <div className="pt-8 border-t border-gray-200 text-center">
-          <p className="text-gray-600">
-            Interested in seeing more? Many of my professional projects are proprietary, 
-            but I'm happy to discuss them in detail during a conversation.
+      <div className="section" style={{ paddingTop: '2rem', borderTop: '1px solid #e5e5e5', textAlign: 'center' }}>
+        <div className="section-content">
+          <h3 style={{ fontWeight: '500', color: '#171717', marginBottom: '1rem' }}>
+            Recognition & Impact
+          </h3>
+          <p style={{ color: '#525252', marginBottom: '1.5rem' }}>
+            Many of my professional projects are proprietary enterprise solutions. 
+            I've received recognition from Google for architectural integrity and have 
+            delivered solutions that serve millions of users.
           </p>
+          <div className="stats-grid" style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div>
+              <div className="stat-number">20+</div>
+              <div className="stat-label">Projects Delivered</div>
+            </div>
+            <div>
+              <div className="stat-number">5</div>
+              <div className="stat-label">Years Experience</div>
+            </div>
+            <div>
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

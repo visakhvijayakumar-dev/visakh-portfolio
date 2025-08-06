@@ -2,72 +2,117 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen py-20 px-6 max-w-4xl mx-auto">
-      <div className="space-y-16">
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">About Me</h1>
+        <hr className="page-divider" />
+        <p className="page-description">
+          Senior Software Engineer and AWS Certified Cloud Practitioner with over 5 years 
+          of industrial experience building scalable enterprise solutions.
+        </p>
+      </div>
+
+      <div className="two-column">
+        <div className="section">
+          <h2 className="section-title">Background</h2>
+          <div className="section-content">
+            <p>
+              I'm a passionate Senior Software Engineer at Quantiphi Analytics with extensive experience 
+              in full-stack development and cloud architecture. My journey began with a strong foundation 
+              in Computer Science, earning my M.Tech from Kerala Technological University with a CGPA of 8.73.
+            </p>
+            <p style={{ marginTop: '1rem' }}>
+              Throughout my career, I've had the privilege of working on cutting-edge projects that serve 
+              millions of users, from IoT device management systems to AI-powered business intelligence platforms.
+            </p>
+          </div>
+        </div>
+
+        <div className="section">
+          <h2 className="section-title">Current Focus</h2>
+          <div className="section-content">
+            <p>
+              At Quantiphi Analytics, I lead the development of sophisticated backend services including 
+              automated presentation generation systems and comprehensive business intelligence platforms. 
+              I work extensively with Google Cloud Platform and collaborate directly with Google architects 
+              on platform architecture.
+            </p>
+            <p style={{ marginTop: '1rem' }}>
+              I've received recognition from Google for maintaining architectural integrity and coding 
+              standards throughout complex project developments.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="section">
+        <h2 className="section-title">Core Technologies</h2>
+        <div className="skills-grid">
+          {[
+            'JavaScript', 'TypeScript', 'Node.js', 'React.js', 
+            'Python', 'MongoDB', 'PostgreSQL', 'MySQL',
+            'AWS', 'Google Cloud Platform', 'AWS IoT',
+            'MERN Stack', 'RESTful APIs', 'OAuth',
+            'Kali Linux', 'OWASP ZAP', 'SQLMap',
+            'HTML5', 'CSS3', 'Material UI', 'Git'
+          ].map((tech) => (
+            <span key={tech} className="skill-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="section">
+        <h2 className="section-title">Education & Certifications</h2>
+        <div className="section-content">
+          <div style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              Master of Technology in Computer Science
+            </h3>
+            <p style={{ color: '#525252', marginBottom: '0.5rem' }}>
+              Kerala Technological University, College of Engineering Trivandrum
+            </p>
+            <p style={{ color: '#737373', fontSize: '0.875rem' }}>
+              2016 - 2018 • CGPA: 8.73
+            </p>
+          </div>
+          
+          <div style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              Bachelor of Technology in Information Technology
+            </h3>
+            <p style={{ color: '#525252', marginBottom: '0.5rem' }}>
+              Cochin University of Science and Technology (CUSAT)
+            </p>
+            <p style={{ color: '#737373', fontSize: '0.875rem' }}>
+              2008 - 2012 • 77.67%
+            </p>
+          </div>
+
+          <div>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              AWS Certified Cloud Practitioner
+            </h3>
+            <p style={{ color: '#525252' }}>
+              Amazon Web Services • Score: 87.7%
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-grid">
         <div>
-          <h1 className="text-4xl md:text-6xl font-serif text-gray-900 mb-8">
-            About Me
-          </h1>
-          <div className="w-24 h-0.5 bg-gray-300"></div>
+          <div className="stat-number">5+</div>
+          <div className="stat-label">Years Experience</div>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-serif text-gray-900 mb-4">Background</h2>
-              <p className="text-gray-700 leading-relaxed">
-                With seven years of experience in full-stack development, I've dedicated my career 
-                to building robust, scalable applications that solve complex business problems. 
-                My journey began with a passion for creating elegant solutions that bridge the gap 
-                between technical possibility and user needs.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-serif text-gray-900 mb-4">Philosophy</h2>
-              <p className="text-gray-700 leading-relaxed">
-                I believe in writing clean, maintainable code that stands the test of time. 
-                My approach emphasizes performance, scalability, and user experience, ensuring 
-                that every solution I deliver meets both current needs and future growth.
-              </p>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-serif text-gray-900 mb-4">Current Focus</h2>
-              <p className="text-gray-700 leading-relaxed">
-                At IBM Labs, I work on cutting-edge enterprise applications, leveraging modern 
-                web technologies to create solutions that impact thousands of users. My current 
-                focus includes cloud-native architectures, microservices, and advanced frontend 
-                frameworks.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-serif text-gray-900 mb-4">Core Technologies</h2>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  'JavaScript', 'TypeScript', 'React', 'Node.js', 
-                  'Python', 'PostgreSQL', 'MongoDB', 'AWS', 
-                  'Docker', 'Kubernetes', 'GraphQL', 'REST APIs'
-                ].map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div>
+          <div className="stat-number">15+</div>
+          <div className="stat-label">Projects Delivered</div>
         </div>
-
-        <div className="pt-8 border-t border-gray-200">
-          <p className="text-gray-600 italic">
-            "Technology is best when it brings people together and solves real problems."
-          </p>
+        <div>
+          <div className="stat-number">87.7%</div>
+          <div className="stat-label">AWS Certification Score</div>
         </div>
       </div>
     </div>
