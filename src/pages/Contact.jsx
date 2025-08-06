@@ -171,7 +171,7 @@ const Contact = () => {
         </p>
         <div className="stats-grid" style={{ maxWidth: '500px', margin: '0 auto' }}>
           <div>
-            <div className="stat-number">5+</div>
+            <div className="stat-number">7+</div>
             <div className="stat-label">Years Experience</div>
           </div>
           <div>

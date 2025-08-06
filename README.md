@@ -1,6 +1,6 @@
 # Visakh Vijayakumar - Portfolio Website
 
-A minimal, sophisticated portfolio website showcasing 5+ years of enterprise software development experience. Built with React and modern web technologies.
+A minimal, sophisticated portfolio website showcasing 7+ years of enterprise software development experience. Built with React and modern web technologies.
 
 ## 🌟 Features
 
@@ -172,7 +172,7 @@ The contact form is ready for integration with:
 
 ## 📊 Key Statistics
 
-- **Experience**: 5+ years in software development
+- **Experience**: 7+ years in software development
 - **Education**: M.Tech Computer Science (8.73 CGPA)
 - **Certification**: AWS Cloud Practitioner (87.7% score)
 - **Recognition**: Google appreciation for architectural integrity
