@@ -58,7 +58,7 @@ const Contact = () => {
             </a>
             
             <a 
-              href="https://linkedin.com/in/visakh-vijayakumar"
+              href="https://www.linkedin.com/in/visakh-vijayakumar-23b36882"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
