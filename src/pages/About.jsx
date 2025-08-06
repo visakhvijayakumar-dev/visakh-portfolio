@@ -7,8 +7,8 @@ const About = () => {
         <h1 className="page-title">About Me</h1>
         <hr className="page-divider" />
         <p className="page-description">
-          Senior Software Engineer and AWS Certified Cloud Practitioner with over 5 years 
-          of industrial experience building scalable enterprise solutions.
+          Software Engineer at IBM India Software Labs, expanding into AI and machine learning 
+          technologies with over 7 years of enterprise software development experience.
         </p>
       </div>
 
@@ -17,13 +17,16 @@ const About = () => {
           <h2 className="section-title">Background</h2>
           <div className="section-content">
             <p>
-              I'm a passionate Senior Software Engineer at Quantiphi Analytics with extensive experience 
-              in full-stack development and cloud architecture. My journey began with a strong foundation 
-              in Computer Science, earning my M.Tech from Kerala Technological University with a CGPA of 8.73.
+              I'm a passionate Software Engineer at IBM India Software Labs in Kochi, working as part 
+              of the innovative <strong>Hyper Blue</strong> team - IBM's internal AI incubator program. 
+              My journey spans over 7 years of building enterprise-level applications, from full-stack 
+              web development to cutting-edge AI-powered solutions.
             </p>
             <p style={{ marginTop: '1rem' }}>
-              Throughout my career, I've had the privilege of working on cutting-edge projects that serve 
-              millions of users, from IoT device management systems to AI-powered business intelligence platforms.
+              With an M.Tech in Computer Science from Kerala Technological University (8.73 CGPA), 
+              I've evolved from traditional web development to specializing in generative AI applications 
+              and AI product development, working on next-generation solutions that aim to generate 
+              significant business impact.
             </p>
           </div>
         </div>
@@ -32,34 +35,79 @@ const About = () => {
           <h2 className="section-title">Current Focus</h2>
           <div className="section-content">
             <p>
-              At Quantiphi Analytics, I lead the development of sophisticated backend services including 
-              automated presentation generation systems and comprehensive business intelligence platforms. 
-              I work extensively with Google Cloud Platform and collaborate directly with Google architects 
-              on platform architecture.
+              At IBM's Hyper Blue AI incubator, I'm working on innovative AI-powered products including 
+              <strong> Enterprise GraphRAG systems</strong> and <strong>Perceptive Analytics for Business Intelligence</strong>. 
+              I'm actively learning and applying machine learning concepts while working with large language models 
+              to build practical AI applications.
             </p>
             <p style={{ marginTop: '1rem' }}>
-              I've received recognition from Google for maintaining architectural integrity and coding 
-              standards throughout complex project developments.
+              My role involves transitioning from traditional software engineering to AI product development, 
+              collaborating with experienced AI teams to create next-generation solutions. I'm passionate about 
+              expanding my knowledge in ML and AI while contributing to IBM's innovative AI initiatives.
             </p>
           </div>
         </div>
       </div>
 
       <div className="section">
-        <h2 className="section-title">Core Technologies</h2>
+        <h2 className="section-title">Technical Skills & Learning Journey</h2>
         <div className="skills-grid">
           {[
-            'JavaScript', 'TypeScript', 'Node.js', 'React.js', 
-            'Python', 'MongoDB', 'PostgreSQL', 'MySQL',
-            'AWS', 'Google Cloud Platform', 'AWS IoT',
-            'MERN Stack', 'RESTful APIs', 'OAuth',
-            'Kali Linux', 'OWASP ZAP', 'SQLMap',
-            'HTML5', 'CSS3', 'Material UI', 'Git'
+            // Core Software Engineering
+            'JavaScript', 'TypeScript', 'Node.js', 'React.js', 'Python', 
+            'MERN Stack', 'MongoDB', 'PostgreSQL', 'RESTful APIs',
+            
+            // AI/ML (Learning & Working)
+            'Large Language Models (LLMs)', 'Generative AI', 'Machine Learning (Learning)', 
+            'IBM Granite Models', 'Llama Models', 'Claude AI', 'GraphRAG', 
+            'Natural Language Processing', 'AI Product Development',
+            
+            // Cloud & Tools
+            'AWS', 'Google Cloud Platform', 'Git', 'Agile Development'
           ].map((tech) => (
             <span key={tech} className="skill-tag">
               {tech}
             </span>
           ))}
+        </div>
+      </div>
+
+      <div className="section">
+        <h2 className="section-title">Career Journey</h2>
+        <div className="section-content">
+          <div style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              Software Engineer - IBM India Software Labs
+            </h3>
+            <p style={{ color: '#525252', marginBottom: '0.5rem' }}>
+              Hyper Blue AI Incubator Team, Kochi
+            </p>
+            <p style={{ color: '#737373', fontSize: '0.875rem' }}>
+              Mar 2024 - Present
+            </p>
+          </div>
+          
+          <div style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              Senior Software Engineer - Quantiphi Analytics
+            </h3>
+            <p style={{ color: '#525252', marginBottom: '0.5rem' }}>
+              Business Intelligence & Cloud Platforms
+            </p>
+            <p style={{ color: '#737373', fontSize: '0.875rem' }}>
+              Nov 2021 - Feb 2024
+            </p>
+          </div>
+
+          <div>
+            <h3 style={{ fontWeight: '500', color: '#171717' }}>
+              Previous Experience
+            </h3>
+            <p style={{ color: '#525252' }}>
+              Full-stack development, IoT systems, security testing, and academic roles 
+              spanning healthcare, energy, and educational technology sectors.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -103,16 +151,16 @@ const About = () => {
 
       <div className="stats-grid">
         <div>
-          <div className="stat-number">5+</div>
+          <div className="stat-number">7+</div>
           <div className="stat-label">Years Experience</div>
         </div>
         <div>
-          <div className="stat-number">15+</div>
-          <div className="stat-label">Projects Delivered</div>
+          <div className="stat-number">AI</div>
+          <div className="stat-label">Product Focus</div>
         </div>
         <div>
-          <div className="stat-number">87.7%</div>
-          <div className="stat-label">AWS Certification Score</div>
+          <div className="stat-number">IBM</div>
+          <div className="stat-label">Hyper Blue Team</div>
         </div>
       </div>
     </div>

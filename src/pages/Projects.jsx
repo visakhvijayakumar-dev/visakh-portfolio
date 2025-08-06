@@ -94,7 +94,7 @@ const Projects = () => {
               <div className="stat-label">Projects Delivered</div>
             </div>
             <div>
-              <div className="stat-number">5</div>
+              <div className="stat-number">7+</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div>

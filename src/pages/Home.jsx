@@ -5,7 +5,7 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <p className="home-subtitle">
-          FULL STACK DEVELOPER
+          SOFTWARE ENGINEER • IBM HYPER BLUE
         </p>
         
         <h1 className="home-title">
@@ -15,9 +15,10 @@ const Home = () => {
         
         <div className="home-description">
           <p>
-            I'm a full stack developer with seven years of experience building enterprise-level 
-            applications. My expertise spans modern web technologies, with a focus on creating 
-            scalable, performant solutions at IBM Labs and beyond.
+            I'm a software engineer at IBM India Software Labs with seven years of experience 
+            building enterprise applications. Currently part of the Hyper Blue AI incubator, 
+            I'm expanding into generative AI and machine learning, developing AI-powered products 
+            while continuously learning and growing in this exciting field.
           </p>
         </div>
       </div>

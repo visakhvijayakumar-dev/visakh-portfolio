@@ -8,7 +8,7 @@ const Experience = () => {
         <hr className="page-divider" />
         <p className="page-description">
           A journey through enterprise software development, cloud architecture, 
-          and innovative technology solutions.
+          and expanding into AI and machine learning technologies.
         </p>
       </div>
 
@@ -17,18 +17,42 @@ const Experience = () => {
         <div className="experience-timeline">
           
           <div className="experience-item">
-            <h3 className="experience-title">Senior Software Engineer</h3>
-            <div className="experience-company">Quantiphi Analytics Solutions Pvt Ltd</div>
-            <div className="experience-period">Nov 2021 - Present</div>
+            <h3 className="experience-title">Software Engineer</h3>
+            <div className="experience-company">IBM India Software Labs, Kochi</div>
+            <div className="experience-period">Mar 2024 - Present</div>
             <div className="experience-description">
               <p style={{ marginBottom: '1rem' }}>
-                <strong>Business Intelligence Platform (Nov 2022 - Present):</strong><br />
-                Leading development of AI-powered backend services including automated presentation 
-                generation, email alert systems, and comprehensive reporting services. Working with 
-                Google Cloud Platform and collaborating directly with Google architects on platform architecture.
+                <strong>Hyper Blue AI Incubator Team:</strong><br />
+                Working on innovative AI-powered products including Enterprise GraphRAG systems and 
+                Perceptive Analytics for Business Intelligence. Actively learning and applying machine 
+                learning concepts while developing generative AI applications that solve real business problems.
               </p>
               <p>
-                <strong>Renewable Energy Platform (Mar 2021 - Nov 2022):</strong><br />
+                Focus on AI product development and research within IBM's internal startup environment, 
+                collaborating with experienced AI teams to create next-generation solutions using large 
+                language models including IBM Granite, Llama, and Claude.
+              </p>
+            </div>
+            <div className="skills-grid">
+              {['LLMs', 'Generative AI', 'IBM Granite', 'GraphRAG', 'Python', 'Node.js', 'AI Product Development'].map((skill) => (
+                <span key={skill} className="skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="experience-item">
+            <h3 className="experience-title">Senior Software Engineer</h3>
+            <div className="experience-company">Quantiphi Analytics Solutions Pvt Ltd</div>
+            <div className="experience-period">Nov 2021 - Feb 2024</div>
+            <div className="experience-description">
+              <p style={{ marginBottom: '1rem' }}>
+                <strong>Business Intelligence Platform (Nov 2022 - Feb 2024):</strong><br />
+                Led development of AI-powered backend services including automated presentation 
+                generation, email alert systems, and comprehensive reporting services. Worked with 
+                Google Cloud Platform and collaborated directly with Google architects on platform architecture.
+              </p>
+              <p>
+                <strong>Renewable Energy Platform (Nov 2021 - Nov 2022):</strong><br />
                 Spearheaded core backend development including Role-Based Access Management (RBAM), 
                 API Manager, Logging Microservice, User Management, and App Usage Analytics. 
                 Received recognition from Google for maintaining architectural integrity and coding standards.
@@ -117,7 +141,7 @@ const Experience = () => {
             </h3>
             <p style={{ color: '#404040' }}>
               Received recognition and appreciation from Google for maintaining architectural 
-              integrity and coding standards throughout complex project development cycles.
+              integrity and coding standards throughout complex project development cycles at Quantiphi.
             </p>
           </div>
           
@@ -135,16 +159,16 @@ const Experience = () => {
 
       <div className="stats-grid">
         <div>
-          <div className="stat-number">5+</div>
+          <div className="stat-number">7+</div>
           <div className="stat-label">Years Experience</div>
         </div>
         <div>
-          <div className="stat-number">20+</div>
-          <div className="stat-label">Projects Delivered</div>
+          <div className="stat-number">5</div>
+          <div className="stat-label">Companies</div>
         </div>
         <div>
-          <div className="stat-number">4</div>
-          <div className="stat-label">Companies</div>
+          <div className="stat-number">AI</div>
+          <div className="stat-label">Current Focus</div>
         </div>
       </div>
     </div>
