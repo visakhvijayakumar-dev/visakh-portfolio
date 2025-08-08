@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, MapPin, Phone } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Phone, Github } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
@@ -95,6 +95,16 @@ const Contact = () => {
             >
               <Linkedin size={20} />
               <span>LinkedIn Profile</span>
+            </a>
+            
+            <a 
+              href="https://github.com/visakhvijayakumar-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              <Github size={20} />
+              <span>GitHub Profile</span>
             </a>
             
             <div className="contact-link">
